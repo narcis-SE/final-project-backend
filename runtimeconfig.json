@@ -1,0 +1,5 @@
+{
+    "mongodb": {
+      "uri":  "mongodb+srv://djtoler:alphagpc@cluster0.rwafh.mongodb.net/NBA?retryWrites=true&w=majority"
+    }
+}
