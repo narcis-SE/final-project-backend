@@ -9,7 +9,7 @@ const app = express();
 
 
 mongoose
-  .connect('mongodb+srv://djtoler:alphagpc@cluster0.rwafh.mongodb.net/NBA?retryWrites=true&w=majority', { 
+  .connect('mongodb+srv://admin:jamesdjnarcis@grandcircus.44u5y.mongodb.net/NBA?retryWrites=true&w=majority', { 
   })
   .then(() => console.log(`Database connected successfully`))
   .catch((err: any) => console.log(err));

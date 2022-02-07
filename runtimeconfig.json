@@ -1,5 +1,5 @@
 {
     "mongodb": {
-      "uri":  "mongodb+srv://djtoler:alphagpc@cluster0.rwafh.mongodb.net/NBA?retryWrites=true&w=majority"
+      "uri":  "mongodb+srv://admin:jamesdjnarcis@grandcircus.44u5y.mongodb.net/NBA?retryWrites=true&w=majority"
     }
 }
