@@ -2,6 +2,7 @@ import express from 'express';
 const questionRoutes = express.Router();
 const Question = require('../models/Question');
 
+
 questionRoutes.get("/", async (req, res) => {
     try {
         console.log("Hello World");
@@ -48,6 +49,41 @@ questionRoutes.get('/random', async (req, res) => {
         res.status(500).json({message: "Internal Server Error"})
     }
 });
+
+
+
+questionRoutes.post('/game', async (req, res) => {
+    console.log("hello world");
+    
+    const {
+        userAnswer, 
+        oneQuestion, 
+        actualAnswer
+    } = req.body;
+
+    try {
+        const questions = await Question.find()
+        console.log(userAnswer);
+        console.log(actualAnswer);
+        console.log(oneQuestion);
+
+        if (userAnswer == actualAnswer) {
+            console.log("Found A Match");
+            res.status(200).json({"message": userAnswer + " matched " + actualAnswer})
+        } else {
+            console.log("Didnt find a match");
+            console.log(userAnswer + "--" + oneQuestion);
+            res.json({"error": "did not match"})
+        }
+    }
+    catch (e) {
+        console.error("Error:", e);
+        res.status(500).json({message: "Internal Server Error"})
+    }
+
+});
+
+
 
 export default questionRoutes;
 
